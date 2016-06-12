@@ -13,15 +13,10 @@
 
 ActiveRecord::Schema.define(version: 20160603150413) do
 
-  create_table "favorites", force: :cascade do |t|
-    t.string   "numbers"
-    t.string   "color"
-    t.string   "movies"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
-  create_table "favorties", force: :cascade do |t|
+  create_table "favorites", force: :cascade do |t|
     t.string   "numbers"
     t.string   "color"
     t.string   "movies"
